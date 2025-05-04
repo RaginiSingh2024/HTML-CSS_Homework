@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Flexbox Practice</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+
+    h2 {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .exercise {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 40px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Exercise 1: Horizontal Navigation Bar */
+    .navbar {
+      display: flex;
+      justify-content: space-around;
+      background: #333;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+    }
+
+    /* Exercise 2: Center a Box */
+    .center-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      background: #ddd;
+    }
+
+    .center-box {
+      background: #4CAF50;
+      padding: 20px;
+      color: white;
+      border-radius: 6px;
+    }
+
+    /* Exercise 3: Responsive Card Row */
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      flex: 1 1 250px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    /* Exercise 4: Equal Height Columns */
+    .equal-height {
+      display: flex;
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .equal-height .box {
+      flex: 1;
+      background: #e0e0e0;
+      padding: 20px;
+      border-radius: 6px;
+    }
+
+    /* Exercise 5: Sidebar + Main Content */
+    .layout {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .sidebar {
+      flex: 1;
+      background: #cfe2f3;
+      padding: 20px;
+    }
+
+    .main {
+      flex: 3;
+      background: #d9ead3;
+      padding: 20px;
+    }
+
+    /* Exercise 6: Button Row with Right Aligned Button */
+    .button-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .button-row button:last-child {
+      margin-left: auto;
+    }
+
+    /* Exercise 7: Vertical Flexbox Navigation */
+    .vertical-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background: #fce5cd;
+      padding: 10px;
+    }
+
+    /* Exercise 8: Flex Order Change */
+    .order-boxes {
+      display: flex;
+      gap: 10px;
+    }
+
+    .order-boxes div {
+      flex: 1;
+      padding: 20px;
+      color: white;
+      text-align: center;
+      border-radius: 6px;
+    }
+
+    .box1 { background: #6fa8dc; order: 2; }
+    .box2 { background: #3d85c6; order: 1; }
+    .box3 { background: #073763; order: 3; }
+
+    /* Exercise 9: Grow One Box More Than Others */
+    .grow-boxes {
+      display: flex;
+      gap: 10px;
+    }
+
+    .grow-boxes .box {
+      padding: 20px;
+      background: #d5a6bd;
+      border-radius: 6px;
+    }
+
+    .grow-boxes .box1 { flex-grow: 1; }
+    .grow-boxes .box2 { flex-grow: 2; }
+
+    /* Exercise 10: Profile Layout */
+    .profile {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .profile img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+    }
+
+    .profile-info {
+      flex: 1;
+    }
+
+    @media (max-width: 600px) {
+      .layout {
+        flex-direction: column;
+      }
+      .profile {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎯 CSS Flexbox Practice Exercises</h1>
+
+  <!-- Exercise 1 -->
+  <div class="exercise">
+    <h2>Exercise 1: Horizontal Navigation Bar</h2>
+    <nav class="navbar">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Exercise 2 -->
+  <div class="exercise">
+    <h2>Exercise 2: Center a Box</h2>
+    <div class="center-container">
+      <div class="center-box">I'm centered!</div>
+    </div>
+  </div>
+
+  <!-- Exercise 3 -->
+  <div class="exercise">
+    <h2>Exercise 3: Responsive Card Row</h2>
+    <div class="card-container">
+      <div class="card">Card 1</div>
+      <div class="card">Card 2</div>
+      <div class="card">Card 3</div>
+    </div>
+  </div>
+
+  <!-- Exercise 4 -->
+  <div class="exercise">
+    <h2>Exercise 4: Equal Height Columns</h2>
+    <div class="equal-height">
+      <div class="box">Column A</div>
+      <div class="box">Column B with<br>more content</div>
+      <div class="box">Column C</div>
+    </div>
+  </div>
+
+  <!-- Exercise 5 -->
+  <div class="exercise">
+    <h2>Exercise 5: Sidebar + Main Content</h2>
+    <div class="layout">
+      <div class="sidebar">Sidebar (25%)</div>
+      <div class="main">Main Content (75%)</div>
+    </div>
+  </div>
+
+  <!-- Exercise 6 -->
+  <div class="exercise">
+    <h2>Exercise 6: Button Row with Right Aligned Button</h2>
+    <div class="button-row">
+      <button>Save</button>
+      <button>Edit</button>
+      <button>Delete</button>
+      <button>Close</button>
+    </div>
+  </div>
+
+  <!-- Exercise 7 -->
+  <div class="exercise">
+    <h2>Exercise 7: Vertical Flexbox Navigation</h2>
+    <div class="vertical-nav">
+      <a href="#">Dashboard</a>
+      <a href="#">Settings</a>
+      <a href="#">Logout</a>
+    </div>
+  </div>
+
+  <!-- Exercise 8 -->
+  <div class="exercise">
+    <h2>Exercise 8: Flex Order Change</h2>
+    <div class="order-boxes">
+      <div class="box1">Box 1 (Order 2)</div>
+      <div class="box2">Box 2 (Order 1)</div>
+      <div class="box3">Box 3 (Order 3)</div>
+    </div>
+  </div>
+
+  <!-- Exercise 9 -->
+  <div class="exercise">
+    <h2>Exercise 9: Grow One Box More Than Others</h2>
+    <div class="grow-boxes">
+      <div class="box box1">Grow 1x</div>
+      <div class="box box2">Grow 2x</div>
+    </div>
+  </div>
+
+  <!-- Exercise 10 -->
+  <div class="exercise">
+    <h2>Exercise 10: Profile Layout</h2>
+    <div class="profile">
+      <img src="https://via.placeholder.com/120" alt="Profile" />
+      <div class="profile-info">
+        <h3>Ragini Singh</h3>
+        <p>Frontend Developer based in India. Loves CSS and clean layouts!</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task 4 – CSS Selectors</title>
+  <style>
+    /* Exercise 1 */
+    .card {
+      background-color: lightgray;
+      padding: 15px;
+      border-radius: 8px;
+      max-width: 300px;
+      margin-bottom: 30px;
+    }
+    #name {
+      color: darkblue;
+    }
+    .bio {
+      font-style: italic;
+    }
+    .card a {
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Exercise 2 */
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    nav a {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: black;
+    }
+    nav a:hover {
+      color: red;
+    }
+    nav li:first-child a {
+      background-color: lightblue;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    /* Exercise 3 */
+    input {
+      border: 1px solid #ccc;
+      padding: 5px;
+      margin-bottom: 10px;
+      display: block;
+    }
+    input:focus {
+      border-color: dodgerblue;
+      outline: none;
+    }
+    button {
+      background-color: green;
+      color: white;
+      padding: 6px 12px;
+      border: none;
+      cursor: pointer;
+    }
+    input[type="email"] {
+      background-color: #f9f9ff;
+    }
+
+    /* Exercise 4 */
+    article h3::before {
+      content: "";
+      display: block;
+      height: 3px;
+      background-color: red;
+      margin-bottom: 5px;
+    }
+    article p::first-line {
+      text-transform: capitalize;
+    }
+    article p::before {
+      content: "* ";
+      color: blue;
+    }
+
+    /* Exercise 5 */
+    .blog h3 {
+      font-weight: bold;
+    }
+    .blog article:nth-child(3) p {
+      color: darkgreen;
+    }
+    .blog article:nth-child(3) {
+      background-color: #f0f8ff;
+      padding: 10px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎯 Task 4: CSS Selectors Practice</h1>
+
+  <!-- Exercise 1 -->
+  <h2>Exercise 1: Profile Card</h2>
+  <div class="card">
+    <h2 id="name">Alex Johnson</h2>
+    <p class="bio">Front-end Developer from New York</p>
+    <a href="#">View Profile</a>
+  </div>
+
+  <!-- Exercise 2 -->
+  <h2>Exercise 2: Navigation Menu</h2>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Exercise 3 -->
+  <h2>Exercise 3: Form Field Focus</h2>
+  <form>
+    <label>Email:</label>
+    <input type="email" />
+
+    <label>Password:</label>
+    <input type="password" />
+
+    <button>Login</button>
+  </form>
+
+  <!-- Exercise 4 -->
+  <h2>Exercise 4: Pseudo-elements</h2>
+  <article>
+    <h3>Breaking News</h3>
+    <p>some important text goes here. this text is styled using a pseudo-element and pseudo-class.</p>
+  </article>
+
+  <!-- Exercise 5 -->
+  <h2>Exercise 5: Advanced Targeting</h2>
+  <section class="blog">
+    <h2>Blog Posts</h2>
+    <article>
+      <h3>Post One</h3>
+      <p>Text of post one.</p>
+    </article>
+    <article>
+      <h3>Post Two</h3>
+      <p>Text of post two.</p>
+    </article>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Ragini Handbook</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #e9f0f7;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 800px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+
+    details {
+      background: #fff;
+      padding: 15px 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      margin-bottom: 15px;
+      transition: background 0.3s;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.1em;
+      list-style: none;
+      display: flex;
+      align-items: center;
+    }
+
+    summary::before {
+      content: '▶';
+      display: inline-block;
+      margin-right: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    details[open] summary::before {
+      transform: rotate(90deg);
+    }
+
+    /* Optional fade-in for content */
+    details[open] p {
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Remove default marker */
+    summary::-webkit-details-marker {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📘 Student Ragini Handbook</h1>
+
+    <details name="notes">
+      <summary>🔷 What is HTML?</summary>
+      <p>HTML (HyperText Markup Language) is the standard language used to create and structure content on the web.</p>
+    </details>
+
+    <details name="notes" open>
+      <summary>🔷 What is a Semantic Tag?</summary>
+      <p>Semantic tags like <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;header&gt;</code>, and <code>&lt;footer&gt;</code> convey meaning and structure to your content.</p>
+    </details>
+
+    <details name="notes">
+      <summary>🔷 Difference Between id and class</summary>
+      <p><strong>id</strong> is unique and used for one element, while <strong>class</strong> can be shared among multiple elements.</p>
+    </details>
+
+    <details name="notes">
+      <summary>🔷 What is a &lt;summary&gt; Element?</summary>
+      <p>The <code>&lt;summary&gt;</code> tag defines a visible heading for the <code>&lt;details&gt;</code> element and acts as a toggle to open/close the content.</p>
+    </details>
+
+    <details name="notes">
+      <summary>🔷 What is CSS?</summary>
+      <p>CSS (Cascading Style Sheets) is used to style and layout web pages including design, colors, fonts, and spacing.</p>
+    </details>
+  </div>
+</body>
+</html>

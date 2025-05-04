@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simple Blog Layout with CSS Grid</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "main sidebar"
+        "footer footer";
+      grid-template-columns: 3fr 1fr;
+      grid-template-rows: auto 1fr auto;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    header {
+      grid-area: header;
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    main {
+      grid-area: main;
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    aside {
+      grid-area: sidebar;
+      background-color: #e0e0e0;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      grid-area: footer;
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        grid-template-areas:
+          "header"
+          "main"
+          "sidebar"
+          "footer";
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      My Blog
+    </header>
+
+    <main>
+      <h2>Welcome to My Blog</h2>
+      <p>This is where the main blog content will appear. You can write articles, share thoughts, and add images or videos. CSS Grid makes it easy to organize everything in a flexible layout.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula neque at lectus viverra, vitae pulvinar arcu vulputate.</p>
+    </main>
+
+    <aside>
+      <h3>About Me</h3>
+      <p>Hi! I'm a web developer and blogger. I love creating layouts with CSS Grid!</p>
+      <h3>Recent Posts</h3>
+      <ul>
+        <li>Understanding CSS Flexbox</li>
+        <li>10 Tips for Responsive Design</li>
+        <li>Getting Started with JavaScript</li>
+      </ul>
+    </aside>
+
+    <footer>
+      &copy; 2025 My Blog. All rights reserved.
+    </footer>
+  </div>
+
+</body>
+</html>
